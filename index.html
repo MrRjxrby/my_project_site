@@ -1,51 +1,320 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Мой сайт</title>
- <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Brand | Timeless Designs for the Future</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 5px solid #4a6fa5;
+        }
+
+        h2 {
+            color: #1a1a2e;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul > li {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+            border-left: 4px solid #4a6fa5;
+        }
+
+        ul > li strong {
+            display: block;
+            font-size: 1.3rem;
+            color: #16213e;
+            margin-bottom: 10px;
+        }
+
+        ul ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        ul ul li {
+            background: none;
+            border-left: none;
+            padding: 5px 0;
+            margin-bottom: 5px;
+            color: #555;
+            list-style-type: disc;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        thead {
+            background-color: #1a1a2e;
+            color: white;
+        }
+
+        th, td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid #e1e5eb;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        tbody tr:hover {
+            background-color: #eef2f7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+            color: #666;
+            font-size: 0.95rem;
+            border-top: 1px solid #ddd;
+            background: #f1f5f9;
+            border-radius: 8px;
+        }
+
+        .highlight {
+            background: linear-gradient(90deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .highlight strong {
+            font-size: 1.4rem;
+            color: #d35400;
+        }
+
+        .price {
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 <body>
- <header>
- <div>
- <h1>МойСайт</h1>
- </div>
- <nav>
- <ul>
- <li><a href="#home">Главная</a></li>
- <li><a href="#about">О нас</a></li>
- <li><a href="#services">Услуги</a></li>
- <li><a href="#contact">Контакты</a></li>
- </ul>
- </nav>
- </header>
- <main>
- <section id="home">
- <h2>Добро пожаловать!</h2>
- <p>Это главная страница нашего веб-приложения.</p>
- </section>
- <section id="about">
- <h2>О нас</h2>
- <p>Мы компания, которая занимается созданием качественных веб-решений.
-</p>
- </section>
- <section id="services">
- <h2>Наши услуги</h2>
- <ul>
- <li>Веб-разработка</li>
- <li>Дизайн</li>
- <li>Консультации</li>
- </ul>
- </section>
- <section id="contact">
- <h2>Контакты</h2>
- <p>Email: info@example.com</p>
- <p>Телефон: +7 (123) 456-78-90</p>
- </section>
- </main>
- <footer>
- <p>&copy; 2025 Сайт. Все права защищены.</p>
- </footer>
+    <header>
+        <h1>The furniture brand for the future, with timeless designs</h1>
+        <p>Introduction</p>
+        <p>A new and more beautiful furniture with durable and flexible inner work brand can be seen to showcase a beautiful home design in our digital world to deliver new technologies.</p>
+    </header>
+    
+    <main>
+        <section>
+            <h2>What makes our brand different?</h2>
+            <ul>
+                <li>
+                    <strong>Mixed designer</strong>
+                    <ul>
+                        <li>Made by TV or Instagram</li>
+                        <li>Introduces virtual posts with web information and networking</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Unbroadcasting</strong>
+                    <ul>
+                        <li>To use a modular and widely popular retailer for their purposes</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Recycled packaging</strong>
+                    <ul>
+                        <li>We use a CDR-supplied packaging mechanism designed to help you achieve your own products.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>New ceramics</h2>
+            <ul>
+                <li>
+                    <strong>The Disney venue</strong>
+                    <ul>
+                        <li>Elastic Verse Park</li>
+                        <li class="price">£150</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>The Baby Verse</strong>
+                    <ul>
+                        <li>Elastic Verse Park</li>
+                        <li class="price">£150</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>The Long Jump</strong>
+                    <ul>
+                        <li>Elastic Long Jump</li>
+                        <li class="price">£299</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>Our popular products</h2>
+            <ul>
+                <li>
+                    <strong>The Disney venue</strong>
+                    <ul>
+                        <li>Elastic Verse Park</li>
+                        <li class="price">£150</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>The Disney venue</strong>
+                    <ul>
+                        <li>Elastic Verse Park</li>
+                        <li class="price">£300</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>The Disney venue</strong>
+                    <ul>
+                        <li>Elastic Long Jump</li>
+                        <li class="price">£400</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="highlight">
+                <p><strong>Join the club and get the benefits</strong></p>
+                <p>Sign up for our excellent and recent exclusive life on our largest sales group brand at most.</p>
+            </div>
+
+            <h2>From a studio in London to a global brand with over 400 outlets</h2>
+            <p>Whereas merchandise, the store was simple. Make high quality furniture appearance and provide the most attractive.</p>
+            <p>Materials are displayed on the floor of the market and have been used as well as the best way to make it easier for the customers.</p>
+
+            <h2>Get brands</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Categories</th>
+                        <th>Our company</th>
+                        <th>Customer feedback</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Brand type</td>
+                        <td>clothing</td>
+                        <td>Artwork</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Business</td>
+                        <td>Culture</td>
+                        <td>Sales mix</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Retail choice</td>
+                        <td>business</td>
+                        <td>Marketing</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Product diversity</td>
+                        <td>Food mix</td>
+                        <td>Fitness</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>All products</td>
+                        <td>Grain</td>
+                        <td>Better policy</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p><em>Group ID: 2017-01-21</em></p>
+    </footer>
 </body>
 </html>
