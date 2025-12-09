@@ -3,318 +3,574 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Furniture Brand | Timeless Designs for the Future</title>
+    <title>Avion - Furniture Brand</title>
+    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600&family=Satoshi:wght@400;500&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            font-family: 'Satoshi', sans-serif;
+            color: #2A254B;
         }
 
-        header {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        h1, h2, h3 {
+            font-family: 'Clash Display', sans-serif;
+            font-weight: 400;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            min-height: 600px;
+        }
+
+        .hero-content {
+            background-color: #2A254B;
             color: white;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            flex: 1;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        header h1 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-            letter-spacing: 1px;
+        .hero-content h1 {
+            font-size: 32px;
+            line-height: 1.4;
+            max-width: 500px;
         }
 
-        header p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
+        .hero-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 600px;
             opacity: 0.9;
         }
 
-        section {
-            background: white;
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border-left: 5px solid #4a6fa5;
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            background-color: rgba(249, 249, 249, 0.15);
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s;
         }
 
-        h2 {
-            color: #1a1a2e;
-            margin-bottom: 25px;
-            font-size: 1.8rem;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
+        .btn:hover {
+            background-color: rgba(249, 249, 249, 0.25);
         }
 
-        ul {
-            list-style: none;
-            padding-left: 0;
+        .btn-light {
+            background-color: #F9F9F9;
+            color: #2A254B;
         }
 
-        ul > li {
-            margin-bottom: 25px;
-            padding: 20px;
-            background: #f8fafc;
-            border-radius: 8px;
-            border-left: 4px solid #4a6fa5;
+        .btn-light:hover {
+            background-color: #e8e8e8;
         }
 
-        ul > li strong {
-            display: block;
-            font-size: 1.3rem;
-            color: #16213e;
-            margin-bottom: 10px;
-        }
-
-        ul ul {
-            margin-top: 10px;
-            padding-left: 20px;
-        }
-
-        ul ul li {
-            background: none;
-            border-left: none;
-            padding: 5px 0;
-            margin-bottom: 5px;
-            color: #555;
-            list-style-type: disc;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-
-        thead {
-            background-color: #1a1a2e;
+        .btn-dark {
+            background-color: #2A254B;
             color: white;
         }
 
-        th, td {
-            padding: 16px 20px;
+        .hero-image {
+            flex: 1;
+            background-color: #9DBEBB;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 80px;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 50px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .feature-item {
             text-align: left;
-            border-bottom: 1px solid #e1e5eb;
         }
 
-        tbody tr:nth-child(even) {
-            background-color: #f8fafc;
+        .feature-icon {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 16px;
         }
 
-        tbody tr:hover {
-            background-color: #eef2f7;
+        .feature-item h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
         }
 
-        footer {
+        .feature-item p {
+            font-size: 16px;
+            color: #505977;
+            line-height: 1.6;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 80px 80px;
+        }
+
+        .products h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 375px;
+            object-fit: cover;
+            margin-bottom: 16px;
+        }
+
+        .product-card h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .product-card p {
+            font-size: 18px;
+            color: #2A254B;
+        }
+
+        .products-btn {
             text-align: center;
-            padding: 25px;
             margin-top: 40px;
-            color: #666;
-            font-size: 0.95rem;
-            border-top: 1px solid #ddd;
-            background: #f1f5f9;
-            border-radius: 8px;
         }
 
-        .highlight {
-            background: linear-gradient(90deg, #ffecd2 0%, #fcb69f 100%);
-            padding: 25px;
-            border-radius: 10px;
-            margin: 30px 0;
+        /* Popular Products */
+        .popular-products {
+            padding: 80px 80px;
+        }
+
+        .popular-products h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .popular-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .popular-grid .product-card:first-child img {
+            height: 462px;
+        }
+
+        .popular-grid .product-card img {
+            height: 462px;
+        }
+
+        /* Join Club Section */
+        .join-club {
+            padding: 80px 80px;
+            background-color: #F9F9F9;
             text-align: center;
         }
 
-        .highlight strong {
-            font-size: 1.4rem;
-            color: #d35400;
+        .join-club h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
         }
 
-        .price {
-            color: #2c3e50;
-            font-weight: bold;
-            font-size: 1.3rem;
+        .join-club p {
+            font-size: 16px;
+            color: #505977;
+            max-width: 500px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        .subscribe-form {
+            display: flex;
+            justify-content: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .subscribe-form input {
+            flex: 1;
+            padding: 16px 24px;
+            border: none;
+            background-color: #F9F9F9;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .subscribe-form button {
+            padding: 16px 32px;
+            background-color: #2A254B;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .subscribe-form button:hover {
+            opacity: 0.9;
+        }
+
+        /* About Section */
+        .about {
+            display: flex;
+            min-height: 600px;
+        }
+
+        .about-content {
+            flex: 1;
+            padding: 80px;
+            background-color: #F9F9F9;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .about-content h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            max-width: 400px;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            color: #505977;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            max-width: 450px;
+        }
+
+        .about-content .btn {
+            margin-top: 20px;
+            width: fit-content;
+        }
+
+        .about-image {
+            flex: 1;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2A254B;
+            color: white;
+            padding: 60px 80px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+
+        .footer-column h4 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            opacity: 1;
+        }
+
+        .footer-subscribe {
+            display: flex;
+        }
+
+        .footer-subscribe input {
+            flex: 1;
+            padding: 12px 16px;
+            background-color: rgba(255, 255, 255, 0.15);
+            border: none;
+            color: white;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .footer-subscribe input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-subscribe button {
+            padding: 12px 24px;
+            background-color: white;
+            color: #2A254B;
+            border: none;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            text-align: left;
+            font-size: 14px;
+            opacity: 0.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero {
+                flex-direction: column;
+            }
+            
+            .features-grid,
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .popular-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about {
+                flex-direction: column;
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 768px) {
-            body {
-                padding: 15px;
+            .hero-content,
+            .features,
+            .products,
+            .popular-products,
+            .join-club,
+            .about-content,
+            footer {
+                padding: 40px 20px;
             }
-
-            header h1 {
-                font-size: 2rem;
-            }
-
-            section {
-                padding: 20px;
-            }
-
-            th, td {
-                padding: 12px 15px;
-                font-size: 0.9rem;
+            
+            .features-grid,
+            .products-grid,
+            .footer-content {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>The furniture brand for the future, with timeless designs</h1>
-        <p>Introduction</p>
-        <p>A new and more beautiful furniture with durable and flexible inner work brand can be seen to showcase a beautiful home design in our digital world to deliver new technologies.</p>
-    </header>
-    
-    <main>
-        <section>
-            <h2>What makes our brand different?</h2>
-            <ul>
-                <li>
-                    <strong>Mixed designer</strong>
-                    <ul>
-                        <li>Made by TV or Instagram</li>
-                        <li>Introduces virtual posts with web information and networking</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Unbroadcasting</strong>
-                    <ul>
-                        <li>To use a modular and widely popular retailer for their purposes</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Recycled packaging</strong>
-                    <ul>
-                        <li>We use a CDR-supplied packaging mechanism designed to help you achieve your own products.</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
 
-        <section>
-            <h2>New ceramics</h2>
-            <ul>
-                <li>
-                    <strong>The Disney venue</strong>
-                    <ul>
-                        <li>Elastic Verse Park</li>
-                        <li class="price">£150</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>The Baby Verse</strong>
-                    <ul>
-                        <li>Elastic Verse Park</li>
-                        <li class="price">£150</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>The Long Jump</strong>
-                    <ul>
-                        <li>Elastic Long Jump</li>
-                        <li class="price">£299</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <h2>Our popular products</h2>
-            <ul>
-                <li>
-                    <strong>The Disney venue</strong>
-                    <ul>
-                        <li>Elastic Verse Park</li>
-                        <li class="price">£150</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>The Disney venue</strong>
-                    <ul>
-                        <li>Elastic Verse Park</li>
-                        <li class="price">£300</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>The Disney venue</strong>
-                    <ul>
-                        <li>Elastic Long Jump</li>
-                        <li class="price">£400</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <div class="highlight">
-                <p><strong>Join the club and get the benefits</strong></p>
-                <p>Sign up for our excellent and recent exclusive life on our largest sales group brand at most.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div>
+                <h1>The furniture brand for the future, with timeless designs</h1>
+                <a href="#" class="btn" style="margin-top: 40px;">View collection</a>
             </div>
+            <p>A new era in eco friendly furniture with Avelon, the French luxury retail brand with nice fonts, tasteful colors and a beautiful way to display things digitally using modern web technologies.</p>
+        </div>
+        <div class="hero-image">
+            <img src="chair-hero.jpg" alt="Modern Chair">
+        </div>
+    </section>
 
+    <!-- Features Section -->
+    <section class="features">
+        <h2>What makes our brand different</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <img src="icon-delivery.svg" alt="Delivery" class="feature-icon">
+                <h3>Next day as standard</h3>
+                <p>Order before 3pm and get your order the next day as standard</p>
+            </div>
+            <div class="feature-item">
+                <img src="icon-checkmark.svg" alt="Quality" class="feature-icon">
+                <h3>Made by true artisans</h3>
+                <p>Handmade crafted goods made with real passion and craftmanship</p>
+            </div>
+            <div class="feature-item">
+                <img src="icon-purchase.svg" alt="Price" class="feature-icon">
+                <h3>Unbeatable prices</h3>
+                <p>For our materials and quality you won't find better prices anywhere</p>
+            </div>
+            <div class="feature-item">
+                <img src="icon-sprout.svg" alt="Recycled" class="feature-icon">
+                <h3>Recycled packaging</h3>
+                <p>We use 100% recycled packaging to ensure our footprint is manageable</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Ceramics Section -->
+    <section class="products">
+        <h2>New ceramics</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="dandy-chair.jpg" alt="The Dandy chair">
+                <h3>The Dandy chair</h3>
+                <p>£250</p>
+            </div>
+            <div class="product-card">
+                <img src="rustic-vase.jpg" alt="Rustic Vase Set">
+                <h3>Rustic Vase Set</h3>
+                <p>£155</p>
+            </div>
+            <div class="product-card">
+                <img src="silky-vase.jpg" alt="The Silky Vase">
+                <h3>The Silky Vase</h3>
+                <p>£125</p>
+            </div>
+            <div class="product-card">
+                <img src="lucy-lamp.jpg" alt="The Lucy Lamp">
+                <h3>The Lucy Lamp</h3>
+                <p>£399</p>
+            </div>
+        </div>
+        <div class="products-btn">
+            <a href="#" class="btn btn-light">View collection</a>
+        </div>
+    </section>
+
+    <!-- Popular Products Section -->
+    <section class="popular-products">
+        <h2>Our popular products</h2>
+        <div class="popular-grid">
+            <div class="product-card">
+                <img src="poplar-sofa.jpg" alt="The Poplar suede sofa">
+                <h3>The Poplar suede sofa</h3>
+                <p>£980</p>
+            </div>
+            <div class="product-card">
+                <img src="dandy-chair.jpg" alt="The Dandy chair">
+                <h3>The Dandy chair</h3>
+                <p>£250</p>
+            </div>
+            <div class="product-card">
+                <img src="dandy-chair-2.jpg" alt="The Dandy chair">
+                <h3>The Dandy chair</h3>
+                <p>£250</p>
+            </div>
+        </div>
+        <div class="products-btn">
+            <a href="#" class="btn btn-light">View collection</a>
+        </div>
+    </section>
+
+    <!-- Join Club Section -->
+    <section class="join-club">
+        <h2>Join the club and get the benefits</h2>
+        <p>Sign up for our newsletter and receive exclusive offers on new ranges, sales, pop up stores and more</p>
+        <form class="subscribe-form">
+            <input type="email" placeholder="your@email.com">
+            <button type="submit">Sign up</button>
+        </form>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="about-content">
             <h2>From a studio in London to a global brand with over 400 outlets</h2>
-            <p>Whereas merchandise, the store was simple. Make high quality furniture appearance and provide the most attractive.</p>
-            <p>Materials are displayed on the floor of the market and have been used as well as the best way to make it easier for the customers.</p>
+            <p>When we started Avion, the idea was simple. Make high quality furniture affordable and available for the mass market.</p>
+            <p>Handmade, and lovingly crafted furniture and homeware is what we live, breathe and design so our Chelsea boutique become the hotbed for the London interior design community.</p>
+            <a href="#" class="btn btn-light">Get in touch</a>
+        </div>
+        <div class="about-image">
+            <img src="about-image.jpg" alt="Interior Design">
+        </div>
+    </section>
 
-            <h2>Get brands</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Categories</th>
-                        <th>Our company</th>
-                        <th>Customer feedback</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Brand type</td>
-                        <td>clothing</td>
-                        <td>Artwork</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Business</td>
-                        <td>Culture</td>
-                        <td>Sales mix</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Retail choice</td>
-                        <td>business</td>
-                        <td>Marketing</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Product diversity</td>
-                        <td>Food mix</td>
-                        <td>Fitness</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>All products</td>
-                        <td>Grain</td>
-                        <td>Better policy</td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
-
+    <!-- Footer -->
     <footer>
-        <p><em>Group ID: 2017-01-21</em></p>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="#">New arrivals</a></li>
+                    <li><a href="#">Best sellers</a></li>
+                    <li><a href="#">Recently viewed</a></li>
+                    <li><a href="#">Popular this week</a></li>
+                    <li><a href="#">All products</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="#">Crockery</a></li>
+                    <li><a href="#">Furniture</a></li>
+                    <li><a href="#">Homeware</a></li>
+                    <li><a href="#">Plant pots</a></li>
+                    <li><a href="#">Chairs</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Our company</h4>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Vacancies</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Returns policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Join our mailing list</h4>
+                <form class="footer-subscribe">
+                    <input type="email" placeholder="your@email.com">
+                    <button type="submit">Sign up</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright 2022 Avion LTD</p>
+        </div>
     </footer>
+
 </body>
 </html>
