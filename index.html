@@ -1,715 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avion - Мебельный бренд</title>
     <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600&family=Satoshi:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Satoshi', sans-serif;
-            color: #2A254B;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Clash Display', sans-serif;
-            font-weight: 400;
-        }
-
-        /* Header Styles */
-        header {
-            background-color: #fff;
-        }
-
-        .header-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-        }
-
-        .header-search {
-            display: flex;
-            align-items: center;
-        }
-
-        .header-search svg {
-            width: 20px;
-            height: 20px;
-            color: #2A254B;
-            cursor: pointer;
-        }
-
-        .header-logo {
-            font-family: 'Clash Display', sans-serif;
-            font-size: 24px;
-            font-weight: 400;
-            color: #2A254B;
-            text-decoration: none;
-        }
-
-        .header-icons {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .header-icons a {
-            display: flex;
-            align-items: center;
-            color: #2A254B;
-        }
-
-        .header-icons svg {
-            width: 20px;
-            height: 20px;
-            cursor: pointer;
-        }
-
-        .header-divider {
-            height: 1px;
-            background-color: rgba(0, 0, 0, 0.1);
-            margin: 0 40px;
-        }
-
-        .header-nav {
-            display: flex;
-            justify-content: center;
-            padding: 20px 40px;
-        }
-
-        .header-nav ul {
-            display: flex;
-            list-style: none;
-            gap: 44px;
-        }
-
-        .header-nav ul li a {
-            font-family: 'Satoshi', sans-serif;
-            font-size: 16px;
-            color: #726E8D;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .header-nav ul li a:hover {
-            color: #2A254B;
-        }
-
-        /* Hero Section */
-        .hero {
-            display: flex;
-            min-height: 600px;
-        }
-
-        .hero-content {
-            background-color: #2A254B;
-            color: white;
-            flex: 1;
-            padding: 60px 80px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .hero-content h1 {
-            font-size: 32px;
-            line-height: 1.4;
-            max-width: 500px;
-        }
-
-        .hero-content p {
-            font-size: 18px;
-            line-height: 1.6;
-            max-width: 600px;
-            opacity: 0.9;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 16px 32px;
-            background-color: rgba(249, 249, 249, 0.15);
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: rgba(249, 249, 249, 0.25);
-        }
-
-        .btn-light {
-            background-color: #F9F9F9;
-            color: #2A254B;
-        }
-
-        .btn-light:hover {
-            background-color: #e8e8e8;
-        }
-
-        .btn-dark {
-            background-color: #2A254B;
-            color: white;
-        }
-
-        .hero-image {
-            flex: 1;
-            background-color: #9DBEBB;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-        }
-
-        .hero-image img {
-            max-height: 90%;
-            object-fit: contain;
-        }
-
-        /* Features Section */
-        .features {
-            padding: 80px 80px;
-        }
-
-        .features h2 {
-            text-align: center;
-            font-size: 24px;
-            margin-bottom: 50px;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-        }
-
-        .feature-item {
-            text-align: left;
-        }
-
-        .feature-icon {
-            width: 24px;
-            height: 24px;
-            margin-bottom: 16px;
-        }
-
-        .feature-item h3 {
-            font-size: 20px;
-            margin-bottom: 12px;
-        }
-
-        .feature-item p {
-            font-size: 16px;
-            color: #505977;
-            line-height: 1.6;
-        }
-
-        /* Products Section */
-        .products {
-            padding: 80px 80px;
-        }
-
-        .products h2 {
-            font-size: 32px;
-            margin-bottom: 40px;
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .product-card img {
-            width: 100%;
-            height: 375px;
-            object-fit: cover;
-            margin-bottom: 16px;
-        }
-
-        .product-card h3 {
-            font-size: 20px;
-            margin-bottom: 8px;
-        }
-
-        .product-card p {
-            font-size: 18px;
-            color: #2A254B;
-        }
-
-        .products-btn {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        /* Popular Products */
-        .popular-products {
-            padding: 80px 80px;
-        }
-
-        .popular-products h2 {
-            font-size: 32px;
-            margin-bottom: 40px;
-        }
-
-        .popular-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 20px;
-        }
-
-        .popular-grid .product-card:first-child img {
-            height: 462px;
-        }
-
-        .popular-grid .product-card img {
-            height: 462px;
-        }
-
-        /* Join Club Section */
-        .join-club {
-            padding: 80px 80px;
-            background-color: #F9F9F9;
-            text-align: center;
-        }
-
-        .join-club h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .join-club p {
-            font-size: 16px;
-            color: #505977;
-            max-width: 500px;
-            margin: 0 auto 40px;
-            line-height: 1.6;
-        }
-
-        .subscribe-form {
-            display: flex;
-            justify-content: center;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .subscribe-form input {
-            flex: 1;
-            padding: 16px 24px;
-            border: none;
-            background-color: #F9F9F9;
-            font-size: 16px;
-            outline: none;
-        }
-
-        .subscribe-form button {
-            padding: 16px 32px;
-            background-color: #2A254B;
-            color: white;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-            transition: opacity 0.3s;
-        }
-
-        .subscribe-form button:hover {
-            opacity: 0.9;
-        }
-
-        /* About Section */
-        .about {
-            display: flex;
-            min-height: 600px;
-        }
-
-        .about-content {
-            flex: 1;
-            padding: 80px;
-            background-color: #F9F9F9;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .about-content h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            max-width: 400px;
-        }
-
-        .about-content p {
-            font-size: 16px;
-            color: #505977;
-            line-height: 1.6;
-            margin-bottom: 16px;
-            max-width: 450px;
-        }
-
-        .about-content .btn {
-            margin-top: 20px;
-            width: fit-content;
-        }
-
-        .about-image {
-            flex: 1;
-        }
-
-        .about-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #2A254B;
-            color: white;
-            padding: 60px 80px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
-        }
-
-        .footer-column h4 {
-            font-family: 'Clash Display', sans-serif;
-            font-size: 16px;
-            font-weight: 400;
-            margin-bottom: 20px;
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 12px;
-        }
-
-        .footer-column ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
-            opacity: 0.8;
-            transition: opacity 0.3s;
-        }
-
-        .footer-column ul li a:hover {
-            opacity: 1;
-        }
-
-        .footer-subscribe {
-            display: flex;
-        }
-
-        .footer-subscribe input {
-            flex: 1;
-            padding: 12px 16px;
-            background-color: rgba(255, 255, 255, 0.15);
-            border: none;
-            color: white;
-            font-size: 14px;
-            outline: none;
-        }
-
-        .footer-subscribe input::placeholder {
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        .footer-subscribe button {
-            padding: 12px 24px;
-            background-color: white;
-            color: #2A254B;
-            border: none;
-            font-size: 14px;
-            cursor: pointer;
-        }
-
-        .footer-bottom {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.15);
-            text-align: left;
-            font-size: 14px;
-            opacity: 0.6;
-        }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .hero {
-                flex-direction: column;
-            }
-            
-            .features-grid,
-            .products-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .popular-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .about {
-                flex-direction: column;
-            }
-            
-            .footer-content {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .header-nav ul {
-                gap: 24px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .header-top {
-                padding: 16px 20px;
-            }
-
-            .header-divider {
-                margin: 0 20px;
-            }
-
-            .header-nav {
-                padding: 16px 20px;
-            }
-
-            .header-nav ul {
-                gap: 16px;
-            }
-
-            .header-nav ul li a {
-                font-size: 14px;
-            }
-
-            .hero-content,
-            .features,
-            .products,
-            .popular-products,
-            .join-club,
-            .about-content,
-            footer {
-                padding: 40px 20px;
-            }
-            
-            .features-grid,
-            .products-grid,
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="header-top">
-            <div class="header-search">
-                <svg src="assets/icons/Search.png" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+    <!-- Header Block -->
+    <header class="header" id="top">
+        <div class="header__top">
+            <div class="header__search">
+                <svg class="header__search-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                 </svg>
             </div>
-            <a href="#" class="header-logo">Avion</a>
-            <div class="header-icons">
-                <a href="#">
-                    <svg scr="assets/icons/logo.png" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <a href="#top" class="header__logo">Avion</a>
+            <div class="header__icons">
+                <a href="#" class="header__icon-link">
+                    <svg class="header__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                     </svg>
                 </a>
-                <a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <a href="#" class="header__icon-link">
+                    <svg class="header__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                     </svg>
                 </a>
             </div>
         </div>
-        <div class="header-divider"></div>
-        <nav class="header-nav">
-            <ul>
-                <li><a href="#">Опубликовать пост</a></li>
-                <li><a href="#">Керамика</a></li>
-                <li><a href="#">Столы</a></li>
-                <li><a href="#">Стулья</a></li>
-                <li><a href="#">Посуда</a></li>
-                <li><a href="#">Сервировка</a></li>
-                <li><a href="#">Столовые приборы</a></li>
+        <div class="header__divider"></div>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#products" class="nav__link">Опубликовать пост</a></li>
+                <li class="nav__item"><a href="#products" class="nav__link">Керамика</a></li>
+                <li class="nav__item"><a href="#products" class="nav__link">Столы</a></li>
+                <li class="nav__item"><a href="#products" class="nav__link">Стулья</a></li>
+                <li class="nav__item"><a href="#products" class="nav__link">Посуда</a></li>
+                <li class="nav__item"><a href="#features" class="nav__link">Сервировка</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">О нас</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div>
-                <h1>Мебельный бренд будущего с неподвластным времени дизайном</h1>
-                <a href="#" class="btn" style="margin-top: 40px;">Посмотреть коллекцию</a>
+    <!-- Hero Block -->
+    <section class="hero" id="hero">
+        <div class="hero__content">
+            <div class="hero__text">
+                <h1 class="hero__title">Мебельный бренд будущего с неподвластным времени дизайном</h1>
+                <a href="#products" class="button button--transparent">Посмотреть коллекцию</a>
             </div>
-            <p>Новая эра в производстве экологически чистой мебели с Avelon, французским брендом розничной торговли класса люкс, с приятными шрифтами, со вкусом подобранными цветами и красивым способом отображения товаров в цифровом виде с использованием современных веб-технологий.</p>
+            <p class="hero__description">Новая эра в производстве экологически чистой мебели с Avelon, французским брендом розничной торговли класса люкс, с приятными шрифтами, со вкусом подобранными цветами и красивым способом отображения товаров в цифровом виде с использованием современных веб-технологий.</p>
         </div>
-        <div class="hero-image">
-            <img src="assets/img/BigChair.png" alt="Modern Chair">
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features">
-        <h2>Что отличает наш бренд?</h2>
-        <div class="features-grid">
-            <div class="feature-item">
-                <img src="assets/icons/Delivery.png" alt="Доставка" class="feature-icon">
-                <h3>Следующий день как стандарт</h3>
-                <p>Закажи до трех часов дня и получи свою доставку на следующий день</p>
-            </div>
-            <div class="feature-item">
-                <img src="assets/icons/Checkmark--outline.png" alt="Качество" class="feature-icon">
-                <h3>Сделано настоящими мастерами</h3>
-                <p>Ручное изготовление на высшем уровне</p>
-            </div>
-            <div class="feature-item">
-                <img src="assets/icons/Purchase.png" alt="Цена" class="feature-icon">
-                <h3>Цены</h3>
-                <p>За наши материалы и качество вы не найдете более низких цен</p>
-            </div>
-            <div class="feature-item">
-                <img src="assets/icons/Sprout.png" alt="Переработка" class="feature-icon">
-                <h3>Переработанная упаковка</h3>
-                <p>Мы используем 100% переработанную упаковку, чтобы обеспечить удобство использования</p>
-            </div>
+        <div class="hero__image">
+            <img src="assets/img/BigChair.png" alt="Modern Chair" class="hero__img">
         </div>
     </section>
 
-    <!-- New Ceramics Section -->
-    <section class="products">
-        <h2>New ceramics</h2>
-        <div class="products-grid">
-            <div class="product-card">
-                <img src="assets/img/Photo.png" alt="The Dandy chair">
-                <h3>The Dandy chair</h3>
-                <p>£250</p>
-            </div>
-            <div class="product-card">
-                <img src="assets/img/Photo.png" alt="Rustio Vase Set">
-                <h3>The Dandy chair</h3>
-                <p>£155</p>
-            </div>
-            <div class="product-card">
-                <img src="assets/img/silky.png" alt="The Silky Vase">
-                <h3>The Silky Vase</h3>
-                <p>£125</p>
-            </div>
-            <div class="product-card">
-                <img src="assets/img/lamp.png" alt="The Lucy Lamp">
-                <h3>The Lucy Lamp</h3>
-                <p>£399</p>
-            </div>
-        </div>
-        <div class="products-btn">
-            <a href="#" class="btn btn-light">Показать коллекцию</a>
+    <!-- Features Block -->
+    <section class="features" id="features">
+        <h2 class="features__title">Что отличает наш бренд?</h2>
+        <div class="features__grid">
+            <article class="feature">
+                <img src="assets/icons/Delivery.png" alt="Доставка" class="feature__icon">
+                <h3 class="feature__title">Следующий день как стандарт</h3>
+                <p class="feature__text">Закажи до трех часов дня и получи свою доставку на следующий день</p>
+            </article>
+            <article class="feature">
+                <img src="assets/icons/Checkmark--outline.png" alt="Качество" class="feature__icon">
+                <h3 class="feature__title">Сделано настоящими мастерами</h3>
+                <p class="feature__text">Ручное изготовление на высшем уровне</p>
+            </article>
+            <article class="feature">
+                <img src="assets/icons/Purchase.png" alt="Цена" class="feature__icon">
+                <h3 class="feature__title">Цены</h3>
+                <p class="feature__text">За наши материалы и качество вы не найдете более низких цен</p>
+            </article>
+            <article class="feature">
+                <img src="assets/icons/Sprout.png" alt="Переработка" class="feature__icon">
+                <h3 class="feature__title">Переработанная упаковка</h3>
+                <p class="feature__text">Мы используем 100% переработанную упаковку, чтобы обеспечить удобство использования</p>
+            </article>
         </div>
     </section>
 
-    <!-- Popular Products Section -->
-    <section class="popular-products">
-        <h2>Наши популярные продукты</h2>
-        <div class="popular-grid">
-            <div class="product-card">
-                <img src="assets/img/Large.png" alt="The Poplar suede sofa">
-                <h3>The Poplar suede sofa</h3>
-                <p>£980</p>
-            </div>
-            <div class="product-card">
-                <img src="assets/img/Photo.png" alt="The Dandy chair">
-                <h3>The Dandy chair</h3>
-                <p>£250</p>
-            </div>
-            <div class="product-card">
-                <img src="assets/img/dandy.png" alt="The Dandy chair">
-                <h3>The Dandy chair</h3>
-                <p>£250</p>
-            </div>
+    <!-- Products Block (New Ceramics) -->
+    <section class="products" id="products">
+        <h2 class="products__title">New ceramics</h2>
+        <div class="products__grid">
+            <article class="product-card">
+                <img src="assets/img/Photo.png" alt="The Dandy chair" class="product-card__image">
+                <h3 class="product-card__title">The Dandy chair</h3>
+                <p class="product-card__price">£250</p>
+            </article>
+            <article class="product-card">
+                <img src="assets/img/Photo.png" alt="Rustio Vase Set" class="product-card__image">
+                <h3 class="product-card__title">The Dandy chair</h3>
+                <p class="product-card__price">£155</p>
+            </article>
+            <article class="product-card">
+                <img src="assets/img/silky.png" alt="The Silky Vase" class="product-card__image">
+                <h3 class="product-card__title">The Silky Vase</h3>
+                <p class="product-card__price">£125</p>
+            </article>
+            <article class="product-card">
+                <img src="assets/img/lamp.png" alt="The Lucy Lamp" class="product-card__image">
+                <h3 class="product-card__title">The Lucy Lamp</h3>
+                <p class="product-card__price">£399</p>
+            </article>
         </div>
-        <div class="products-btn">
-            <a href="#" class="btn btn-light">View collection</a>
+        <div class="products__actions">
+            <a href="#" class="button button--light">Показать коллекцию</a>
         </div>
     </section>
 
-    <!-- Join Club Section -->
-    <section class="join-club">
-        <h2>Присоединяйся к сообществу</h2>
-        <p>Авторизуйся, получай эксклюзивные предложения и новости.</p>
-        <form class="subscribe-form">
-            <input type="email" placeholder="your@email.com">
-            <button type="submit">Авторизоваться</button>
+    <!-- Popular Products Block -->
+    <section class="products products--popular" id="popular">
+        <h2 class="products__title">Наши популярные продукты</h2>
+        <div class="products__grid products__grid--popular">
+            <article class="product-card product-card--large">
+                <img src="assets/img/Large.png" alt="The Poplar suede sofa" class="product-card__image">
+                <h3 class="product-card__title">The Poplar suede sofa</h3>
+                <p class="product-card__price">£980</p>
+            </article>
+            <article class="product-card">
+                <img src="assets/img/Photo.png" alt="The Dandy chair" class="product-card__image">
+                <h3 class="product-card__title">The Dandy chair</h3>
+                <p class="product-card__price">£250</p>
+            </article>
+            <article class="product-card">
+                <img src="assets/img/dandy.png" alt="The Dandy chair" class="product-card__image">
+                <h3 class="product-card__title">The Dandy chair</h3>
+                <p class="product-card__price">£250</p>
+            </article>
+        </div>
+        <div class="products__actions">
+            <a href="#" class="button button--light">View collection</a>
+        </div>
+    </section>
+
+    <!-- Subscribe Block -->
+    <section class="subscribe" id="subscribe">
+        <h2 class="subscribe__title">Присоединяйся к сообществу</h2>
+        <p class="subscribe__text">Авторизуйся, получай эксклюзивные предложения и новости.</p>
+        <form class="subscribe__form">
+            <input type="email" class="subscribe__input" placeholder="your@email.com">
+            <button type="submit" class="subscribe__button">Авторизоваться</button>
         </form>
     </section>
 
-    <!-- About Section -->
-    <section class="about">
-        <div class="about-content">
-            <h2>От студии в Лондоне до мирового бренда с более чем 400 торговыми точками</h2>
-            <p>Когда мы создавали Avion, идея была проста. Сделать высококачественную мебель доступной для массового рынка.</p>
-            <p>Мебель и предметы домашнего обихода ручной работы - это то, чем мы живем, дышим и проектируем, поэтому наш бутик в Челси стал центром внимания лондонского сообщества дизайнеров интерьера.</p>
-            <a href="#" class="btn btn-light">Быть на связи</a>
+    <!-- About Block -->
+    <section class="about" id="about">
+        <div class="about__content">
+            <h2 class="about__title">От студии в Лондоне до мирового бренда с более чем 400 торговыми точками</h2>
+            <p class="about__text">Когда мы создавали Avion, идея была проста. Сделать высококачественную мебель доступной для массового рынка.</p>
+            <p class="about__text">Мебель и предметы домашнего обихода ручной работы - это то, чем мы живем, дышим и проектируем, поэтому наш бутик в Челси стал центром внимания лондонского сообщества дизайнеров интерьера.</p>
+            <a href="#subscribe" class="button button--light">Быть на связи</a>
         </div>
-        <div class="about-image">
-            <img src="assets/img/interier.png" alt="Interior Design">
+        <div class="about__image">
+            <img src="assets/img/interier.png" alt="Interior Design" class="about__img">
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-column">
-                <h4>Menu</h4>
-                <ul>
-                    <li><a href="#">Новые поступления</a></li>
-                    <li><a href="#">Бестселлеры</a></li>
-                    <li><a href="#">Недавно просмотренный</a></li>
-                    <li><a href="#">Популярные на этой неделе</a></li>
-                    <li><a href="#">Все продукты</a></li>
+    <!-- Footer Block -->
+    <footer class="footer" id="contacts">
+        <div class="footer__content">
+            <div class="footer__column">
+                <h4 class="footer__heading">Menu</h4>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#" class="footer__link">Новые поступления</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Бестселлеры</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Недавно просмотренный</a></li>
+                    <li class="footer__item"><a href="#popular" class="footer__link">Популярные на этой неделе</a></li>
+                    <li class="footer__item"><a href="#products" class="footer__link">Все продукты</a></li>
                 </ul>
             </div>
-            <div class="footer-column">
-                <h4>Categories</h4>
-                <ul>
-                    <li><a href="#">Посуда</a></li>
-                    <li><a href="#">Мебель</a></li>
-                    <li><a href="#">Товары для дома</a></li>
-                    <li><a href="#">Горшки для растений</a></li>
-                    <li><a href="#">Стулья</a></li>
+            <div class="footer__column">
+                <h4 class="footer__heading">Categories</h4>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#" class="footer__link">Посуда</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Мебель</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Товары для дома</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Горшки для растений</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Стулья</a></li>
                 </ul>
             </div>
-            <div class="footer-column">
-                <h4>Our company</h4>
-                <ul>
-                    <li><a href="#">О нас</a></li>
-                    <li><a href="#">Вакансии</a></li>
-                    <li><a href="#">Связь</a></li>
-                    <li><a href="#">Политика</a></li>
+            <div class="footer__column">
+                <h4 class="footer__heading">Our company</h4>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#about" class="footer__link">О нас</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Вакансии</a></li>
+                    <li class="footer__item"><a href="#contacts" class="footer__link">Связь</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Политика</a></li>
                 </ul>
             </div>
-            <div class="footer-column">
-                <h4>Присоединяйтесь к нашему списку рассылки</h4>
-                <form class="footer-subscribe">
-                    <input type="email" placeholder="your@email.com">
-                    <button type="submit">Авторизоваться</button>
+            <div class="footer__column">
+                <h4 class="footer__heading">Присоединяйтесь к нашему списку рассылки</h4>
+                <form class="footer__subscribe">
+                    <input type="email" class="footer__input" placeholder="your@email.com">
+                    <button type="submit" class="footer__button">Авторизоваться</button>
                 </form>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>Copyright 2025 Avion LTD</p>
+        <div class="footer__bottom">
+            <p class="footer__copyright">Copyright 2025 Avion LTD</p>
         </div>
     </footer>
 
