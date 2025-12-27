@@ -269,7 +269,7 @@ h1, h2, h3, h4 {
 
 .features__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
 }
 
@@ -314,7 +314,7 @@ h1, h2, h3, h4 {
 
 .products__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
@@ -371,7 +371,7 @@ h1, h2, h3, h4 {
 
 .popular-products__grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
@@ -444,6 +444,89 @@ h1, h2, h3, h4 {
     transform: translateY(0);
 }
 
+.masonry {
+    padding: 80px;
+}
+
+.masonry__title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.masonry__grid {
+    column-count: 3;
+    column-gap: 24px;
+}
+
+.masonry__item {
+    display: inline-block;
+    margin-bottom: 24px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    break-inside: avoid;
+}
+
+.masonry__item--short {
+    height: 150px;
+}
+
+.masonry__item--tall {
+    height: 300px;
+}
+
+.masonry__item--very-tall {
+    height: 400px;
+}
+
+@media (max-width: 1024px) {
+    .masonry__grid {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .masonry__grid {
+        column-count: 1;
+    }
+}
+
+/* Ноутбуки (меньше 1200px) */
+@media (max-width: 1199px) {
+    .hero__title {
+        font-size: 28px;
+    }
+}
+
+/* Планшеты (меньше 992px) */
+@media (max-width: 991px) {
+    .hero__title {
+        font-size: 24px;
+    }
+}
+
+/* Мобильные в альбомной ориентации (меньше 768px) */
+@media (max-width: 767px) {
+    .hero__title {
+        font-size: 20px;
+    }
+}
+
+/* Мобильные (меньше 576px) */
+@media (max-width: 575px) {
+    .hero__title {
+        font-size: 18px;
+    }
+}
+
+/* Очень маленькие экраны (меньше 400px) */
+@media (max-width: 399px) {
+    .hero__title {
+        font-size: 16px;
+    }
+}
 /* Блок: About */
 .about {
     display: flex;
@@ -699,3 +782,4 @@ h1, h2, h3, h4 {
         margin-top: 10px;
     }
 }
+
