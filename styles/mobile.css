@@ -1,0 +1,311 @@
+/* mobile.css - Стили для планшетов и мобильных устройств */
+
+/* Планшет (1024px и меньше) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .header__top {
+        padding: 15px 20px;
+    }
+
+    .header__divider {
+        margin: 0 20px;
+    }
+
+    .header__nav {
+        padding: 15px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+        order: 3;
+    }
+
+    .header__icons {
+        order: 2;
+    }
+
+    .header__search {
+        order: 1;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .nav__list {
+        gap: 20px;
+    }
+
+    /* Герой секция адаптация */
+    .hero__content,
+    .features,
+    .products,
+    .popular-products,
+    .join-club,
+    .about__content,
+    .masonry,
+    .footer {
+        padding: 60px 40px;
+    }
+}
+
+/* Планшет и мобильные (768px и меньше) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Основная навигация (скрыта по умолчанию) */
+    .header__nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background: white;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        padding: 100px 30px 30px;
+        transition: right 0.4s ease;
+        z-index: 1000;
+        overflow-y: auto;
+        display: block !important;
+    }
+
+    .header__nav.active {
+        right: 0;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
+    }
+
+    .nav__item {
+        width: 100%;
+    }
+
+    .nav__link {
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        font-size: 18px; /* Увеличиваем для мобильных */
+        border-bottom: 1px solid #eee;
+        border-radius: 0;
+    }
+
+    .nav__link:hover,
+    .nav__item--active .nav__link {
+        background: transparent;
+        color: var(--primary-color);
+        padding-left: 10px;
+    }
+
+    .nav__item--active .nav__link {
+        border-bottom-color: var(--primary-color);
+    }
+
+    .nav__link::after {
+        display: none;
+    }
+
+    /* Затемнение фона при открытом меню */
+    .nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    .nav-overlay.active {
+        display: block;
+    }
+
+    /* Контент адаптация */
+    .hero__content,
+    .features,
+    .products,
+    .popular-products,
+    .join-club,
+    .about__content,
+    .masonry,
+    .footer {
+        padding: 40px 20px;
+    }
+
+    .features__grid,
+    .products__grid,
+    .footer__content {
+        grid-template-columns: 1fr;
+    }
+
+    .popular-products__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero__title {
+        font-size: 28px;
+    }
+
+    .hero__text {
+        font-size: 16px;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+    }
+
+    .subscribe-form__input {
+        margin-bottom: 10px;
+    }
+
+    .subscribe-form__button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .footer-subscribe {
+        flex-direction: column;
+    }
+
+    .footer-subscribe__button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about__image {
+        height: 300px;
+    }
+
+    /* Masonry адаптация для мобильных */
+    .masonry__grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 200px);
+        column-count: 1;
+    }
+    
+    .masonry__item {
+        grid-column: 1 / 2 !important;
+        grid-row: auto !important;
+    }
+
+    /* Увеличиваем touch-зоны */
+    .btn {
+        min-width: 120px;
+    }
+
+    .header__search-icon,
+    .header__icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* Кнопка "Наверх" для мобильных */
+    .scroll-top {
+        width: 52px;
+        height: 52px;
+        min-width: 52px;
+        min-height: 52px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 22px;
+    }
+
+    body {
+        font-size: 17px; /* iOS рекомендация */
+    }
+}
+
+/* Мобильные (480px и меньше) */
+@media (max-width: 480px) {
+    .header__nav {
+        width: 100%;
+    }
+
+    .header__logo {
+        font-size: 20px;
+    }
+
+    .logo img {
+        width: 100px;
+        height: auto;
+    }
+
+    .hero__title {
+        font-size: 24px;
+    }
+
+    .features__title,
+    .products__title,
+    .popular-products__title,
+    .join-club__title,
+    .masonry__title {
+        font-size: 24px;
+    }
+
+    .feature__title,
+    .product-card__title {
+        font-size: 18px;
+    }
+
+    .join-club__title {
+        font-size: 28px;
+    }
+
+    .masonry__item h3 {
+        font-size: 18px;
+    }
+
+    .masonry__item p {
+        font-size: 14px;
+    }
+
+    /* Очень маленькие экраны (меньше 400px) */
+    @media (max-width: 399px) {
+        .hero__title {
+            font-size: 20px;
+        }
+        
+        .header__top {
+            padding: 12px 16px;
+        }
+        
+        .hero__content,
+        .features,
+        .products,
+        .popular-products,
+        .join-club,
+        .about__content,
+        .masonry,
+        .footer {
+            padding: 30px 16px;
+        }
+    }
+}
+
+/* Ландшафтная ориентация на мобильных */
+@media (max-height: 600px) and (orientation: landscape) {
+    .header__nav {
+        padding: 80px 20px 20px;
+    }
+    
+    .nav__link {
+        padding: 10px 0;
+        font-size: 16px;
+    }
+}
