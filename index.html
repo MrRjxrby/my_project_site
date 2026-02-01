@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avion - Мебельный бренд</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mobile.css">
 </head>
 <body>
     <!-- Header -->
@@ -16,6 +17,14 @@
                 </svg>
             </div>
             <a href="#header" class="header__logo">Avion</a>
+            
+            <!-- Гамбургер-кнопка -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
+                <span class="menu-toggle__line"></span>
+                <span class="menu-toggle__line"></span>
+                <span class="menu-toggle__line"></span>
+            </button>
+            
             <div class="header__icons">
                 <a href="#" class="header__icon-link">
                     <svg class="header__icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
@@ -30,7 +39,9 @@
             </div>
         </div>
         <div class="header__divider"></div>
-        <nav class="header__nav">
+        
+        <!-- Навигация -->
+        <nav class="header__nav nav" id="mainNav">
             <ul class="nav__list">
                 <li class="nav__item"><a href="#products" class="nav__link">Керамика</a></li>
                 <li class="nav__item"><a href="#popular" class="nav__link">Столы</a></li>
@@ -162,6 +173,37 @@
         </div>
     </section>
 
+    <!-- Masonry Section -->
+    <section class="masonry" id="masonry">
+        <h2 class="masonry__title">Дополнительные материалы</h2>
+        <div class="masonry__grid">
+            <article class="masonry__item">
+                <h3>Краткий материал</h3>
+                <p>Короткое описание особенностей производства.</p>
+            </article>
+            <article class="masonry__item">
+                <h3>Подробный материал</h3>
+                <p>Развернутое описание с дополнительной информацией о процессе создания мебели.</p>
+            </article>
+            <article class="masonry__item">
+                <h3>Стандартный материал</h3>
+                <p>Описание наших дизайнерских принципов.</p>
+            </article>
+            <article class="masonry__item">
+                <h3>Обширный материал</h3>
+                <p>Полное описание со всеми техническими характеристиками и особенностями применения.</p>
+            </article>
+            <article class="masonry__item">
+                <h3>Новинки сезона</h3>
+                <p>Анонс новых коллекций и ограниченных серий, которые появятся в продаже.</p>
+            </article>
+            <article class="masonry__item">
+                <h3>История бренда</h3>
+                <p>Рассказ о бренде.</p>
+            </article>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer" id="footer">
         <div class="footer__content">
@@ -206,36 +248,11 @@
             <p>Copyright 2025 Avion LTD</p>
         </div>
     </footer>
-<section class="masonry" id="masonry">
-    <h2 class="masonry__title">Дополнительные материалы</h2>
-    <div class="masonry__grid">
-        <article class="masonry__item">
-            <h3>Краткий материал</h3>
-            <p>Короткое описание особенностей производства.</p>
-        </article>
-        <article class="masonry__item">
-            <h3>Подробный материал</h3>
-            <p>Развернутое описание с дополнительной информацией о процессе создания мебели.</p>
-        </article>
-        <article class="masonry__item">
-            <h3>Стандартный материал</h3>
-            <p>Описание наших дизайнерских принципов.</p>
-        </article>
-        <article class="masonry__item">
-            <h3>Обширный материал</h3>
-            <p>Полное описание со всеми техническими характеристиками и особенностями применения.</p>
-        </article>
-        <article class="masonry__item">
-            <h3>Новинки сезона</h3>
-            <p>Анонс новых коллекций и ограниченных серий, которые появятся в продаже.</p>
-        </article>
-        <article class="masonry__item">
-            <h3>История бренда</h3>
-            <p>Рассказ о бренде.</p>
-        </article>
-    </div>
-</section>
+
+    <!-- Кнопка "Наверх" -->
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
+
+    <!-- Подключение JavaScript -->
+    <script src="scripts/menu.js"></script>
 </body>
 </html>
-
-
